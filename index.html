@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piyush Kumar — Autonomous Systems &amp; Full-Stack Engineer</title>
+<meta name="description" content="Piyush Kumar — CSE student, Autonomous Head at Team Rotor FPV, AI/ML and full-stack engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<meta property="og:title" content="Piyush Kumar — Autonomous Systems & Full-Stack Engineer">
+<meta property="og:description" content="CSE student, Autonomous Head at Team Rotor FPV, AI/ML and full-stack engineer.">
+<meta property="og:image" content="assets/images/og-cover.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/images/og-cover.jpg">
+</head>
+<body>
+
+<!-- HUD scanline / vignette overlay -->
+<div class="hud-overlay" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">◎</span>
+      <span class="brand-text">PIYUSH<span class="brand-dim">.KUMAR</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#telemetry">STATS</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#skills">SYSTEMS</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <a href="#contact" class="nav-cta">GET IN TOUCH</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="assets/images/og-cover.jpg">
+    <source src="assets/animations/0710.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-overlay" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="dot"></span> STATUS: OPERATIONAL — VELLORE, INDIA
+    </div>
+    <h1 class="hero-title">
+      Engineering autonomy<br> from <span class="accent">code</span> to <span class="accent2">flight</span>.
+    </h1>
+    <p class="hero-sub">
+      I'm Piyush Kumar — a Computer Science Engineering student building AI-driven navigation
+      systems, full-stack platforms, and edge-deployed perception pipelines. Autonomous Head at
+      Team Rotor FPV, currently interning at Tata Technologies.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">VIEW MISSIONS <span>→</span></a>
+      <a href="#contact" class="btn btn-ghost">ESTABLISH CONTACT</a>
+    </div>
+  </div>
+  <div class="hero-hud" aria-hidden="true">
+    <div class="hud-ring">
+      <canvas id="drone3d"></canvas>
+      <div class="hud-readout">
+        <div><span class="k">CGPA</span><span class="v">8.73</span></div>
+        <div><span class="k">WINS</span><span class="v">3</span></div>
+        <div><span class="k">ALT</span><span class="v">3RD YR</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TELEMETRY / QUICK STATS -->
+<section id="telemetry" class="telemetry">
+  <div class="telemetry-strip">
+    <div class="tstat"><span class="tval">8.73</span><span class="tlabel">CGPA / 10</span></div>
+    <div class="tsep"></div>
+    <div class="tstat"><span class="tval">3</span><span class="tlabel">COMPETITION WINS</span></div>
+    <div class="tsep"></div>
+    <div class="tstat"><span class="tval">3+</span><span class="tlabel">MAJOR PROJECTS SHIPPED</span></div>
+    <div class="tsep"></div>
+    <div class="tstat"><span class="tval">2</span><span class="tlabel">INTERNSHIPS COMPLETED</span></div>
+    <div class="tsep"></div>
+    <div class="tstat"><span class="tval">200+</span><span class="tlabel">STUDENTS TRAINED / MENTORED</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="section-head">
+    <span class="eyebrow">// 01 — FLIGHT LOG</span>
+    <h2>About</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I'm a third-year B.Tech Computer Science &amp; Engineering student (Information Security)
+        at VIT Vellore, working at the intersection of autonomous systems, applied AI, and
+        full-stack software. My background spans two runways: one where I design perception
+        and navigation pipelines for competition drones, and another where I build production-grade
+        web platforms with Django and React.
+      </p>
+      <p>
+        As Autonomous Head of <strong>Team Rotor FPV</strong>, I lead a technical team building
+        AI-driven navigation modules — fusing LiDAR and depth-camera data, deploying edge AI
+        on Raspberry Pi, and coordinating autonomous mission development. That same systems
+        thinking carries into my software work: role-based access systems, REST APIs, and
+        vector search engines built from first principles.
+      </p>
+      <p>
+        Recently wrapped a Python/Django internship at Tata Technologies, shipping a full leave
+        management platform end to end. Outside of coursework, I run drone workshops for
+        students from grade 6 through university level — because good engineers should also
+        be good teachers.
+      </p>
+      <div class="about-panel">
+        <div class="panel-row"><span>LOCATION</span><span>Vellore, Tamil Nadu, India</span></div>
+        <div class="panel-row"><span>PROGRAM</span><span>B.Tech CSE (InfoSec)</span></div>
+        <div class="panel-row"><span>INSTITUTION</span><span>VIT Vellore</span></div>
+        <div class="panel-row"><span>ROLE</span><span>Autonomous Head, Team Rotor FPV</span></div>
+        <div class="panel-row"><span>FOCUS</span><span>AI/ML · Cybersecurity · Full-Stack</span></div>
+      </div>
+    </div>
+    <div class="about-photo">
+      <div class="photo-frame">
+        <img src="assets/images/myimage.jpeg" alt="Piyush Kumar" onerror="this.parentElement.classList.add('img-missing')">
+        <div class="photo-fallback">
+          <span class="fallback-icon">◎</span>
+          <span>Add your photo at<br><code>assets/images/profile.jpg</code></span>
+        </div>
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <div class="frame-tag">PILOT ID // PK-01</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience">
+  <div class="section-head">
+    <span class="eyebrow">// 02 — MISSION HISTORY</span>
+    <h2>Experience</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-marker"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <h3>Project Intern</h3>
+          <span class="tl-date">May 2026 – Jul 2026</span>
+        </div>
+        <div class="tl-org">Tata Technologies Limited · Jamshedpur, India</div>
+        <ul>
+          <li>Contributed to industry-oriented technical projects, collaborating with cross-functional engineering teams on implementation.</li>
+          <li>Supported technical documentation and engineering workflows to align with project delivery timelines.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-marker active"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <h3>Autonomous Head</h3>
+          <span class="tl-date">May 2024 – Present</span>
+        </div>
+        <div class="tl-org">Team Rotor FPV · Vellore, Tamil Nadu</div>
+        <ul>
+          <li>Design AI-driven navigation modules and perception pipelines, integrating LiDAR and depth-camera sensors through multi-sensor fusion.</li>
+          <li>Lead a technical team, coordinating autonomous mission development and conducting workshops on drone assembly, tuning, and programming.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-marker"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <h3>Virtual Intern</h3>
+          <span class="tl-date">Jun 2024 – Jul 2024</span>
+        </div>
+        <div class="tl-org">Indian Space Lab · Remote</div>
+        <ul>
+          <li>Completed remote sensing and satellite technology learning modules through a virtual internship program.</li>
+          <li>Supported simulation-based studies and data analysis tasks under mentor guidance.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <div class="section-head">
+    <span class="eyebrow">// 03 — PAYLOADS</span>
+    <h2>Projects</h2>
+  </div>
+  <div class="project-grid">
+
+    <article class="project-card">
+      <div class="project-card-head">
+        <span class="project-index">01</span>
+        <span class="project-year">2026</span>
+      </div>
+      <h3>Leave Booking &amp; Approval System</h3>
+      <p>Full-stack, role-based Leave Management System (Admin, Manager, Employee) with dynamic
+      org-hierarchy approval chains, real-time leave quota tracking, and automated email
+      notifications via SMTP. Multi-level approval workflow via Django ORM and signals, with
+      forced first-login password change and token-based reset. REST API with DRF, AJAX-based
+      real-time quota validation, and manager dashboards with statistics.</p>
+      <div class="tags">
+        <span>Python</span><span>Django</span><span>DRF</span><span>PostgreSQL</span><span>Bootstrap</span><span>AJAX</span>
+      </div>
+      <a class="project-link" href="https://github.com/Pk-webTech/Leave-Management-System" target="_blank" rel="noopener">VIEW ON GITHUB →</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card-head">
+        <span class="project-index">02</span>
+        <span class="project-year">2026</span>
+      </div>
+      <h3>Local RAG System — Custom Vector Store</h3>
+      <p>Java-based vector database built from scratch, implementing HNSW (Hierarchical Navigable
+      Small World), KD-Tree, and brute-force algorithms for high-dimensional nearest-neighbor
+      search. Integrated a local Retrieval-Augmented Generation pipeline using Ollama for
+      on-device semantic search without external API dependencies. Benchmarked accuracy/speed
+      trade-offs across all three retrieval algorithms.</p>
+      <div class="tags">
+        <span>Java</span><span>HNSW</span><span>KD-Tree</span><span>Ollama</span><span>RAG</span>
+      </div>
+      <a class="project-link" href="https://github.com/Pk-webTech/Local-RAG-System-Custom-Vector-Store" target="_blank" rel="noopener">VIEW ON GITHUB →</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card-head">
+        <span class="project-index">03</span>
+        <span class="project-year">2025</span>
+      </div>
+      <h3>Crop Disease Detection &amp; Pesticide Recommendation</h3>
+      <p>Image-based classifier using computer vision and machine learning to identify plant
+      diseases, with a Streamlit interface delivering real-time predictions and automated
+      pesticide recommendations for farmers.</p>
+      <div class="tags">
+        <span>Python</span><span>OpenCV</span><span>AI/ML</span><span>Streamlit</span>
+      </div>
+      <a class="project-link" href="https://github.com/Pk-webTech" target="_blank" rel="noopener">VIEW ON GITHUB →</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills">
+  <div class="section-head">
+    <span class="eyebrow">// 04 — ONBOARD SYSTEMS</span>
+    <h2>Skills</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-module">
+      <h4>Languages</h4>
+      <div class="chips"><span>Python</span><span>Java</span><span>JavaScript</span><span>SQL</span></div>
+    </div>
+    <div class="skill-module">
+      <h4>Web Development</h4>
+      <div class="chips"><span>HTML</span><span>CSS</span><span>React</span><span>Django</span><span>Django REST Framework</span><span>REST APIs</span><span>AJAX</span><span>Bootstrap</span></div>
+    </div>
+    <div class="skill-module">
+      <h4>Databases</h4>
+      <div class="chips"><span>SQL</span><span>PostgreSQL</span></div>
+    </div>
+    <div class="skill-module">
+      <h4>Cloud &amp; Tools</h4>
+      <div class="chips"><span>AWS</span><span>Docker</span><span>Kubernetes</span><span>Git</span><span>GitHub</span></div>
+    </div>
+    <div class="skill-module">
+      <h4>AI &amp; Robotics</h4>
+      <div class="chips"><span>Machine Learning</span><span>Computer Vision</span><span>Sensor Fusion</span><span>ROS</span></div>
+    </div>
+    <div class="skill-module">
+      <h4>Cybersecurity</h4>
+      <div class="chips"><span>Threat Detection</span><span>Behavioral Analysis</span><span>Malware Detection</span></div>
+    </div>
+    <div class="skill-module">
+      <h4>Leadership &amp; Other</h4>
+      <div class="chips"><span>Technical Leadership</span><span>Drone Assembly &amp; Tuning</span><span>FPV Systems</span><span>Technical Documentation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION + ACHIEVEMENTS -->
+<section id="education" class="education">
+  <div class="section-head">
+    <span class="eyebrow">// 05 — GROUND SCHOOL</span>
+    <h2>Education &amp; Achievements</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <h3>Vellore Institute of Technology (VIT)</h3>
+      <p class="edu-degree">Bachelor of Technology in Computer Science and Engineering</p>
+      <p class="edu-meta">2023 – 2027 · Vellore, India · CGPA: 8.73 / 10</p>
+    </div>
+    <div class="achievements">
+      <div class="ach-item"><span class="ach-badge">🏆</span><span>Winner, International Space Drone Competition — 2025 &amp; 2026</span></div>
+      <div class="ach-item"><span class="ach-badge">🏆</span><span>Winner, IIT Roorkee Sky Maneuver Competition — 2026</span></div>
+      <div class="ach-item"><span class="ach-badge">🎖️</span><span>7th Position, Autonomous Drone Development Challenge (ADDC) 2024–2025</span></div>
+      <div class="ach-item"><span class="ach-badge">🎖️</span><span>Finalist, MathWorks Minidrone Competition</span></div>
+    </div>
+  </div>
+
+  <div class="community">
+    <h4>Leadership &amp; Community Engagement</h4>
+    <ul>
+      <li>Conducted a hands-on Quadcopter Workshop for VIT students, covering drone technology fundamentals, hardware assembly, and practical hands-on building.</li>
+      <li>Conducted STEM outreach drone workshops at Springdays School (CBSE &amp; Cambridge), teaching drone components, FPV flight principles, and live flight demonstrations to Grades 6–9.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div class="section-head center">
+      <span class="eyebrow">// 06 — TRANSMIT</span>
+      <h2>Get In Touch</h2>
+      <p class="contact-sub">Open to software engineering, AI/ML, and autonomous systems roles. Reach out — I read every transmission.</p>
+    </div>
+
+    <div class="contact-panel">
+      <div class="contact-form-wrap">
+        <div class="panel-label">// COMPOSE MESSAGE</div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label for="cf-name">NAME</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="cf-email">EMAIL</label>
+            <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="cf-subject">SUBJECT</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="Let's build something">
+          </div>
+          <div class="form-row">
+            <label for="cf-message">MESSAGE</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Type your transmission..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">SEND TRANSMISSION <span>→</span></button>
+          <p class="form-note">Opens your email client, addressed to piyushkumar.dev01@gmail.com</p>
+        </form>
+      </div>
+
+      <div class="contact-info-wrap">
+        <div class="panel-label">// DIRECT CHANNELS</div>
+        <a class="contact-card" href="mailto:piyushkumar.dev01@gmail.com">
+          <span class="c-icon">✉</span>
+          <span class="c-text">
+            <span class="c-label">EMAIL</span>
+            <span class="c-value">piyushkumar.dev01@gmail.com</span>
+          </span>
+        </a>
+        <a class="contact-card" href="tel:+917004177015">
+          <span class="c-icon">☎</span>
+          <span class="c-text">
+            <span class="c-label">PHONE</span>
+            <span class="c-value">+91-7004177015</span>
+          </span>
+        </a>
+        <a class="contact-card" href="https://github.com/Pk-webTech" target="_blank" rel="noopener">
+          <span class="c-icon">⌥</span>
+          <span class="c-text">
+            <span class="c-label">GITHUB</span>
+            <span class="c-value">github.com/Pk-webTech</span>
+          </span>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/piyush-kumar-411b8928a" target="_blank" rel="noopener">
+          <span class="c-icon">in</span>
+          <span class="c-text">
+            <span class="c-label">LINKEDIN</span>
+            <span class="c-value">Connect on LinkedIn</span>
+          </span>
+        </a>
+        <div class="status-box">
+          <div class="status-row"><span class="dot"></span> AVAILABILITY <span class="status-val">OPEN TO ROLES</span></div>
+          <div class="status-row-sub">Vellore, Tamil Nadu, India · Remote-friendly</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© <span id="year"></span> Piyush Kumar. Built with intent, not templates.</span>
+    <span class="footer-status"><span class="dot"></span> SIGNAL: LOCKED</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
