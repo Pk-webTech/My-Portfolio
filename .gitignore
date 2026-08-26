@@ -1,1 +1,7 @@
-assets/animations/0710.mp4
+@"
+.env
+venv/
+__pycache__/
+*.pyc
+"@ | Out-File -FilePath .gitignore -Encoding utf8
+.vscode/
