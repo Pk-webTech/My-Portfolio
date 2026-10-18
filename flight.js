@@ -13,7 +13,7 @@
   function resizeScene() { stage.querySelector('.flight-world').setAttribute('viewBox',compact.matches?'80 0 880 370':'0 0 1100 370'); }
   compact.addEventListener('change',resizeScene); resizeScene();
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let mode = 'orbit', paused = reduced.matches, visible = false, frame = 0, previous = null, phase = 0;
+  let mode = 'orbit', paused = window.isPortfolioMotionPaused ? window.isPortfolioMotionPaused() : reduced.matches, visible = false, frame = 0, previous = null, phase = 0;
   let position = {x:705,y:113}, angle = 0;
   const paths = {
     orbit:'M535 165 C535 80 875 80 875 165 C875 250 535 250 535 165',
@@ -48,8 +48,9 @@
     if (reduced.matches || paused) { position={x:705,y:mode==='land'?279:113}; angle=0; stage.dataset.landed=String(mode==='land'); draw(); }
     sync();
   }));
-  pause.addEventListener('click', () => { paused=!paused; sync(); });
-  reduced.addEventListener('change', () => { paused=reduced.matches; sync(); });
+  window.addEventListener('portfolio:motion', event => { paused=event.detail.paused; sync(); });
+  pause.addEventListener('click', () => { if(window.setPortfolioMotionPaused) window.setPortfolioMotionPaused(!paused); else { paused=!paused; sync(); } });
+  reduced.addEventListener('change', () => { paused=window.isPortfolioMotionPaused ? window.isPortfolioMotionPaused() : reduced.matches; sync(); });
   document.addEventListener('visibilitychange',sync);
   if ('IntersectionObserver' in window) new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.05}).observe(stage);
   else visible=true;
