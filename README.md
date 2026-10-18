@@ -24,7 +24,7 @@ The widget keeps a bounded conversation in memory, sends one request at a time, 
 ## Content
 
 - `index.html`: biography, experience, projects, skills, education, and contact details.
-- `styles.css`: responsive dark/lime design and reduced-motion support.
+- `styles.css`: responsive light editorial design and reduced-motion support.
 - `chat-knowledge.js`: local assistant facts.
 - `backend/main.py`: AI assistant facts and API handling. Keep these facts aligned with the page when editing.
 - `assets/images/myimage.jpeg`: hero portrait.
@@ -37,4 +37,4 @@ Run `node --check script.js` and `node --test tests/chat.test.cjs`.
 
 ## Custom drone animation
 
-`flight.js` animates the inline SVG Flight Lab: an illustrated FPV pilot avatar, orbit and figure-eight paths, a landing sequence, and pause/resume controls. The portrait has a matching hovering drone. No animation packages or extra network dependencies are needed. Motion follows the device reduced-motion preference; the flight loop stops when the scene is offscreen or the page is hidden. Include `flight.js` when deploying alongside the existing HTML/CSS/JS files.
+`flight.js` animates the inline SVG Flight Lab: an illustrated FPV pilot avatar, orbit and figure-eight paths, a landing sequence, and pause/resume controls. The demo sits in a contained panel alongside its introduction, after the skills section. No animation packages or extra network dependencies are needed. Motion follows the device reduced-motion preference; the flight loop stops when the scene is offscreen or the page is hidden. Include `flight.js` when deploying alongside the existing HTML/CSS/JS files.
