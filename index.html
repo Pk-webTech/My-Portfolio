@@ -18,6 +18,7 @@
 <meta name="twitter:image" content="assets/images/og-cover.jpg">
 </head>
 <body>
+<a class="skip-link" href="#home">Skip to content</a>
 
 <!-- HUD scanline / vignette overlay -->
 <div class="hud-overlay" aria-hidden="true"></div>
@@ -29,129 +30,76 @@
       <span class="brand-mark">◎</span>
       <span class="brand-text">PIYUSH<span class="brand-dim">.KUMAR</span></span>
     </a>
-    <nav class="nav-links">
-      <a href="#about">ABOUT</a>
-      <a href="#telemetry">STATS</a>
-      <a href="#experience">EXPERIENCE</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#skills">SYSTEMS</a>
-      <a href="#education">EDUCATION</a>
-      <a href="#certificates">CERTS</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
+    <nav class="nav-links" id="navigation" aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a></nav>
     <a href="#contact" class="nav-cta">GET IN TOUCH</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navigation" aria-expanded="false">☰</button>
   </div>
 </header>
 
-<!-- HERO -->
+<main>
 <section id="home" class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="assets/images/og-cover.jpg">
-    <source src="assets/animations/0710.mp4" type="video/mp4">
-  </video>
-  <div class="hero-video-overlay" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-content">
-    <div class="hero-tag">
-      <span class="dot"></span> STATUS: OPERATIONAL — VELLORE, INDIA
-    </div>
-    <h1 class="hero-title">
-      Engineering autonomy<br> from <span class="accent">code</span> to <span class="accent2">flight</span>.
-    </h1>
-    <p class="hero-sub">
-      I'm Piyush Kumar — a Computer Science Engineering student building AI-driven navigation
-      systems, full-stack platforms, and edge-deployed perception pipelines. Autonomous Head at
-      Team Rotor FPV, currently interning at Tata Technologies.
-    </p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">VIEW MISSIONS <span>→</span></a>
-      <a href="#contact" class="btn btn-ghost">ESTABLISH CONTACT</a>
-    </div>
+<div class="hero-content"><div class="hero-tag"><span class="dot"></span> VELLORE, INDIA · CLASS OF 2027</div><p class="hero-name">Hi, I'm Piyush Kumar.</p>
+<h1>Building intelligence.<br><span>Making it real.</span></h1>
+<p class="hero-sub">Final-year Computer Science student at VIT Vellore, building intelligent systems that solve real-world problems — from autonomous drones to full-stack applications.</p>
+<div class="hero-actions"><a href="#projects" class="btn btn-primary">Explore my work <span>↗</span></a><a href="#contact" class="btn btn-ghost">Let's connect <span>→</span></a></div>
+<div class="hero-footnote"><span>AI &amp; Machine Learning</span><span>Autonomous Systems</span><span>Full-Stack</span></div></div>
+<div class="hero-visual"><div class="hero-drone" aria-hidden="true"><svg viewBox="-60 -35 120 70"><g stroke-linecap="round" stroke-linejoin="round"><path d="M-34-12 34 12M-34 12 34-12" stroke="#8c9d76" stroke-width="5"/><path d="M-10-8 10-8 16 4 0 12-16 4Z" fill="#303e25" stroke="#d6f783" stroke-width="2"/><path d="M-6-5 6-5 8 2-8 2Z" fill="#d6f783"/><circle cy="8" r="3" fill="#b4e4f2"/><g transform="translate(-34 -12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(34 -12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(-34 12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(34 12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g></g></svg><span>READY FOR TAKEOFF</span></div><div class="portrait-label"><span class="dot"></span> CURIOUS BY DEFAULT. ENGINEER BY PRACTICE.</div><img src="assets/images/myimage.jpeg" alt="Piyush Kumar" fetchpriority="high"><div class="role-card"><span class="role-icon">⌘</span><div><small>CURRENTLY BUILDING WITH</small><strong>Team Rotor FPV</strong><span>Autonomous Head</span></div></div></div>
+</section>
+<div class="focus-strip"><span>INTELLIGENCE IN ACTION</span><strong>Perception</strong><span>↗</span><strong>Prediction</strong><span>↗</span><strong>Autonomy</strong><span>↗</span><strong>Software</strong></div>
+
+<section class="flight-lab" id="flight-lab" aria-labelledby="flight-title">
+  <div class="flight-heading"><div><span class="eyebrow">A LITTLE FLIGHT TIME</span><h2 id="flight-title">Code. Fly. Repeat.</h2><p>Meet my digital co-pilot. Pick a flight path and watch us take off.</p></div><span class="flight-stamp">BUILT FOR THE LOVE OF FLIGHT ↗</span></div>
+  <div class="flight-stage" data-flight-mode="orbit">
+    <div class="flight-topline"><span><span class="dot"></span> PIYUSH / FLIGHT LAB</span><span id="flightStatus" role="status">Orbit selected</span></div>
+    <svg class="flight-world" viewBox="0 0 1100 370" role="img" aria-labelledby="flightArtTitle flightArtDesc">
+      <title id="flightArtTitle">Piyush’s illustrated avatar piloting an FPV drone</title><desc id="flightArtDesc">A stylized pilot in FPV goggles and a Rotor-inspired team jersey holds a radio controller while a quadcopter flies above a landing pad.</desc>
+      <defs><pattern id="flightGrid" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#52613f" opacity=".4"/></pattern><linearGradient id="visor" x2="1" y2="1"><stop stop-color="#465b59"/><stop offset="1" stop-color="#111c20"/></linearGradient><symbol id="portfolioDrone" viewBox="-56 -30 112 60"><g stroke-linecap="round" stroke-linejoin="round"><path d="M-34-12 34 12M-34 12 34-12" stroke="#8c9d76" stroke-width="5"/><path d="M-10-8 10-8 16 4 0 12-16 4Z" fill="#303e25" stroke="#d6f783" stroke-width="2"/><path d="M-6-5 6-5 8 2-8 2Z" fill="#d6f783"/><circle cy="8" r="3" fill="#b4e4f2"/><g transform="translate(-34 -12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(34 -12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(-34 12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(34 12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g></g></symbol></defs>
+      <rect width="1100" height="370" fill="url(#flightGrid)"/>
+      <g fill="none" stroke="#34432c"><path d="M0 325H1100M330 325 560 210M550 325 670 210M850 325 780 210M1090 325 890 210M420 280H1000M480 245H940"/><path d="M450 210H920" stroke-dasharray="4 8"/></g>
+      <g class="flight-scenery" fill="none" stroke="#637b46" opacity=".6"><path d="M460 80h20m-10-10v20M960 100h20m-10-10v20M850 35h12m-6-6v12"/><circle cx="1005" cy="220" r="5"/><circle cx="415" cy="155" r="3"/></g>
+      <ellipse cx="705" cy="300" rx="90" ry="20" fill="#d6f783" fill-opacity=".03" stroke="#657b49"/><ellipse cx="705" cy="300" rx="63" ry="13" fill="none" stroke="#d6f783" stroke-opacity=".3"/><path d="M692 293v14m26-14v14m-26-7h26" stroke="#d6f783" stroke-width="2"/>
+      <text x="705" y="345" fill="#859374" text-anchor="middle" font-family="monospace" font-size="10" letter-spacing="3">HOME POINT</text>
+      <path id="flightPath" d="M535 165 C535 80 875 80 875 165 C875 250 535 250 535 165" fill="none" stroke="#d6f783" stroke-opacity=".22" stroke-width="1.5" stroke-dasharray="4 9"/>
+      <g class="pilot-avatar" transform="translate(115 30)">
+        <ellipse cx="100" cy="297" rx="80" ry="10" fill="#000" opacity=".25"/>
+        <path d="M68 218 65 283h29l9-54 10 54h29l-8-65" fill="#26322e" stroke="#61705b" stroke-width="2"/>
+        <path d="M65 277h29v17H52q-4-11 13-17m48 0h29l14 12q3 5-5 5h-38Z" fill="#dde7cf"/>
+        <path d="M64 127 93 118h20l29 9 16 62-24 9v31H66v-31l-24-9Z" fill="#25363b" stroke="#6a8586" stroke-width="2"/>
+        <path d="M73 127 83 147h39l13-20M72 153h57" fill="none" stroke="#d6f783" stroke-width="3"/>
+        <path d="M65 177v49m70-49v49" stroke="#d6f783" stroke-width="3"/>
+        <text x="101" y="174" text-anchor="middle" font-size="11" font-family="sans-serif" letter-spacing="2" fill="#e0e9d4">ROTOR</text><text x="101" y="188" text-anchor="middle" font-size="8" font-family="monospace" letter-spacing="3" fill="#b4c6b9">FPV</text>
+        <path d="M91 105v22q12 13 22 0v-22" fill="#b9825f"/>
+        <path d="M69 61q0-35 33-35 34 0 35 35v30q-4 30-35 31-30-4-33-31Z" fill="#d2a17b"/>
+        <path d="M67 64q-12-33 12-40 13-23 35-10 32-6 28 33l-7 23-6-29q-25 13-47 1l-5 22Z" fill="#171f20" stroke="#39483d" stroke-width="2"/>
+        <path d="M70 74h-9v17h10m65-17h8v17h-8" fill="#bb8866"/>
+        <path d="M90 104q12 8 24 0" fill="none" stroke="#704835" stroke-width="2" stroke-linecap="round"/>
+        <path d="M66 65h73v27H66Z" fill="#111c20"/>
+        <rect x="64" y="62" width="77" height="34" rx="12" fill="url(#visor)" stroke="#8caaa3" stroke-width="2"/><path d="M74 69h22m-24 5h12" stroke="#cbe8d5" stroke-opacity=".6" stroke-width="2"/>
+        <path d="M127 62 132 43" stroke="#aebc9a" stroke-width="3"/><circle cx="132" cy="42" r="3" fill="#d6f783"/>
+        <g class="pilot-hands"><path d="m49 183 15 21 22-8m64-13-13 21-21-8" fill="none" stroke="#d2a17b" stroke-width="13" stroke-linecap="round"/>
+          <path d="m78 187 47 0 6 24-15 6-9-7H95l-9 7-15-6Z" fill="#17221e" stroke="#839773" stroke-width="2"/><path d="M101 187v-14" stroke="#a2b989" stroke-width="3"/><circle cx="87" cy="198" r="5" fill="#5e7053"/><circle cx="115" cy="198" r="5" fill="#5e7053"/><path d="m87 198 1-6m27 6 2-5" stroke="#d6f783" stroke-width="2"/><rect x="97" y="196" width="9" height="6" rx="1" fill="#d6f783"/></g>
+        <g class="radio-signal" fill="none" stroke="#d6f783" stroke-width="2" stroke-linecap="round"><path d="M151 65q14 8 0 16"/><path d="M160 59q23 14 0 28"/><path d="M170 51q33 22 0 44"/></g>
+      </g>
+      <g id="flyingDrone" transform="translate(705 113)"><g id="droneBank"><g stroke-linecap="round" stroke-linejoin="round"><path d="M-34-12 34 12M-34 12 34-12" stroke="#8c9d76" stroke-width="5"/><path d="M-10-8 10-8 16 4 0 12-16 4Z" fill="#303e25" stroke="#d6f783" stroke-width="2"/><path d="M-6-5 6-5 8 2-8 2Z" fill="#d6f783"/><circle cy="8" r="3" fill="#b4e4f2"/><g transform="translate(-34 -12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(34 -12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(-34 12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g><g transform="translate(34 12)"><ellipse rx="18" ry="6" fill="#d6f783" fill-opacity=".08" stroke="#d6f783" stroke-opacity=".4"/><g class="propeller"><path d="M-16 0H16" stroke="#e7ffb7" stroke-width="2"/></g><circle r="2.5" fill="#f2f5e9"/></g></g></g></g>
+      <text x="218" y="358" text-anchor="middle" fill="#b8c7a4" font-family="monospace" font-size="10" letter-spacing="2">PIYUSH / ON THE STICKS</text>
+    </svg>
+    <div class="flight-controls" hidden><div class="flight-modes" role="group" aria-label="Drone flight path"><button type="button" data-flight="orbit" aria-pressed="true">Orbit</button><button type="button" data-flight="eight" aria-pressed="false">Figure eight</button><button type="button" data-flight="land" aria-pressed="false">Land</button></div><button type="button" id="flightPause" aria-pressed="false">Pause motion</button></div>
   </div>
-  <div class="hero-hud" aria-hidden="true">
-    <div class="hud-ring">
-      <canvas id="drone3d"></canvas>
-      <div class="hud-readout">
-        <div><span class="k">CGPA</span><span class="v">8.73</span></div>
-        <div><span class="k">WINS</span><span class="v">3</span></div>
-        <div><span class="k">ALT</span><span class="v">3RD YR</span></div>
-      </div>
-    </div>
-  </div>
+  <p class="flight-note">A playful illustration of my favorite intersection: software, hardware, and a little airtime.</p>
 </section>
 
-<!-- TELEMETRY / QUICK STATS -->
-<section id="telemetry" class="telemetry">
-  <div class="telemetry-strip">
-    <div class="tstat"><span class="tval">8.73</span><span class="tlabel">CGPA / 10</span></div>
-    <div class="tsep"></div>
-    <div class="tstat"><span class="tval">3</span><span class="tlabel">COMPETITION WINS</span></div>
-    <div class="tsep"></div>
-    <div class="tstat"><span class="tval">3+</span><span class="tlabel">MAJOR PROJECTS SHIPPED</span></div>
-    <div class="tsep"></div>
-    <div class="tstat"><span class="tval">2</span><span class="tlabel">INTERNSHIPS COMPLETED</span></div>
-    <div class="tsep"></div>
-    <div class="tstat"><span class="tval">200+</span><span class="tlabel">STUDENTS TRAINED / MENTORED</span></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="section-head">
-    <span class="eyebrow">// 01 — FLIGHT LOG</span>
-    <h2>About</h2>
-  </div>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>
-        I'm a fourth-year B.Tech Computer Science &amp; Engineering student (Information Security)
-        at VIT Vellore, working at the intersection of autonomous systems, applied AI, and
-        full-stack software. My background spans two runways: one where I design perception
-        and navigation pipelines for competition drones, and another where I build production-grade
-        web platforms with Django and React.
-      </p>
-      <p>
-        As Autonomous Head of <strong>Team Rotor FPV</strong>, I lead a technical team building
-        AI-driven navigation modules — fusing LiDAR and depth-camera data, deploying edge AI
-        on Raspberry Pi, and coordinating autonomous mission development. That same systems
-        thinking carries into my software work: role-based access systems, REST APIs, and
-        vector search engines built from first principles.
-      </p>
-      <p>
-        Recently wrapped a Python/Django internship at Tata Technologies, shipping a full leave
-        management platform end to end. Outside of coursework, I run drone workshops for
-        students from grade 6 through university level — because good engineers should also
-        be good teachers.
-      </p>
-      <div class="about-panel">
-        <div class="panel-row"><span>LOCATION</span><span>Vellore, Tamil Nadu, India</span></div>
-        <div class="panel-row"><span>PROGRAM</span><span>B.Tech CSE (InfoSec)</span></div>
-        <div class="panel-row"><span>INSTITUTION</span><span>VIT Vellore</span></div>
-        <div class="panel-row"><span>ROLE</span><span>Autonomous Head, Team Rotor FPV</span></div>
-        <div class="panel-row"><span>FOCUS</span><span>AI/ML · Cybersecurity · Full-Stack</span></div>
-      </div>
-    </div>
-    <div class="about-photo">
-      <div class="photo-frame">
-        <img src="assets/images/myimage.jpeg" alt="Piyush Kumar" onerror="this.parentElement.classList.add('img-missing')">
-        <div class="photo-fallback">
-          <span class="fallback-icon">◎</span>
-          <span>Add your photo at<br><code>assets/images/profile.jpg</code></span>
-        </div>
-        <div class="frame-corner tl"></div>
-        <div class="frame-corner tr"></div>
-        <div class="frame-corner bl"></div>
-        <div class="frame-corner br"></div>
-        <div class="frame-tag">PILOT ID // PK-01</div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section id="about" class="about"><div class="section-head"><span class="eyebrow">01 / THE PERSON BEHIND THE PROJECTS</span><h2>Curiosity drives me.<br><span>Building defines me.</span></h2></div>
+<div class="about-grid"><div class="about-text"><p class="lead">I'm a fourth-year B.Tech Computer Science &amp; Engineering student specializing in Information Security at VIT Vellore. I enjoy turning complex challenges into working solutions.</p>
+<p>As <strong>Autonomous Head at Team Rotor FPV</strong>, I lead and collaborate with a technical team developing intelligent drone navigation. My work brings together LiDAR, depth-camera data, computer vision, and AI models deployed on edge devices such as Raspberry Pi.</p>
+<p>My interest in machine learning extends beyond flight. With <strong>ATERNET</strong>, I explored solar power forecasting by combining historical energy generation data with weather information — strengthening my experience in deep learning, data processing, and complete AI pipelines.</p>
+<p>During my internship at <strong>Tata Technologies</strong>, I worked on a leave management platform and gained practical experience with Python, Django, REST APIs, databases, authentication, and real-world development workflows. I also build full-stack applications with React.</p>
+<p>Outside my projects, I conduct drone workshops for school and university students. I’m constantly exploring Generative AI, intelligent agents, cybersecurity, and emerging software technologies.</p><p class="about-closing">Keep learning. Build meaningful things. Make a difference.</p></div>
+<aside class="about-panel" aria-label="Profile details"><span class="eyebrow">AT A GLANCE</span>
+<div class="panel-row"><span>Based in</span><strong>Vellore, Tamil Nadu, India</strong></div><div class="panel-row"><span>Education</span><strong>B.Tech CSE<br>Information Security</strong></div><div class="panel-row"><span>Institution / Graduation</span><strong>VIT Vellore / 2027</strong></div><div class="panel-row"><span>Current role</span><strong>Autonomous Head<br>Team Rotor FPV</strong></div><div class="panel-row"><span>Industry experience</span><strong>Tata Technologies<br>Python / Django Development</strong></div><div class="panel-row"><span>Focus</span><strong>AI · Machine Learning · Autonomous Systems · Cybersecurity · Full-Stack</strong></div><a href="#contact" class="project-link">Start a conversation ↗</a></aside></div></section>
 <!-- EXPERIENCE -->
 <section id="experience" class="experience">
   <div class="section-head">
-    <span class="eyebrow">// 02 — MISSION HISTORY</span>
+    <span class="eyebrow">02 / WHERE I’VE CONTRIBUTED</span>
     <h2>Experience</h2>
   </div>
   <div class="timeline">
@@ -165,7 +113,7 @@
         </div>
         <div class="tl-org">Tata Technologies Limited · Jamshedpur, India</div>
         <ul>
-          <li>Contributed to industry-oriented technical projects, collaborating with cross-functional engineering teams on implementation.</li>
+          <li>Developed a Python/Django leave management platform, working with REST APIs, databases, authentication, and approval workflows.</li>
           <li>Supported technical documentation and engineering workflows to align with project delivery timelines.</li>
         </ul>
       </div>
@@ -207,10 +155,10 @@
 <!-- PROJECTS -->
 <section id="projects" class="projects">
   <div class="section-head">
-    <span class="eyebrow">// 03 — PAYLOADS</span>
+    <span class="eyebrow">03 / SELECTED WORK</span>
     <h2>Projects</h2>
   </div>
-  <div class="project-grid">
+  <div class="project-grid"><article class="project-card featured"><div class="project-card-head"><span class="project-index">FEATURED / AI &amp; ENERGY</span><span class="project-year">ATERNET</span></div><h3>Smarter forecasts.<br>Cleaner energy.</h3><p>An intelligent solar power forecasting system combining historical energy generation with weather information to make more reliable predictions. An exploration of deep learning, data processing, and end-to-end AI pipelines.</p><div class="tags"><span>Machine Learning</span><span>Deep Learning</span><span>Forecasting</span></div><a class="project-link" href="#contact">Ask me about ATERNET ↗</a></article>
 
     <article class="project-card">
       <div class="project-card-head">
@@ -267,7 +215,7 @@
 <!-- SKILLS -->
 <section id="skills" class="skills">
   <div class="section-head">
-    <span class="eyebrow">// 04 — ONBOARD SYSTEMS</span>
+    <span class="eyebrow">04 / MY TOOLKIT</span>
     <h2>Skills</h2>
   </div>
   <div class="skills-grid">
@@ -305,13 +253,13 @@
 <!-- EDUCATION + ACHIEVEMENTS -->
 <section id="education" class="education">
   <div class="section-head">
-    <span class="eyebrow">// 05 — GROUND SCHOOL</span>
+    <span class="eyebrow">05 / EDUCATION & RECOGNITION</span>
     <h2>Education &amp; Achievements</h2>
   </div>
   <div class="edu-grid">
     <div class="edu-card">
       <h3>Vellore Institute of Technology (VIT)</h3>
-      <p class="edu-degree">Bachelor of Technology in Computer Science and Engineering</p>
+      <p class="edu-degree">Bachelor of Technology in Computer Science and Engineering (Information Security)</p>
       <p class="edu-meta">2023 – 2027 · Vellore, India · CGPA: 8.73 / 10</p>
     </div>
     <div class="achievements">
@@ -331,114 +279,18 @@
   </div>
 </section>
 
-<!-- CERTIFICATES -->
-<section id="certificates" class="certificates">
-  <div class="section-head">
-    <span class="eyebrow">// 06 — CREDENTIAL CACHE</span>
-    <h2>Certificates</h2>
-    <p class="cert-hint">Hover to inspect · tap on mobile</p>
-  </div>
-  <div class="cert-grid">
-
-    <div class="cert-card" tabindex="0">
-      <div class="cert-card-inner">
-        <div class="cert-face cert-front">
-          <div class="cert-shine"></div>
-          <div class="cert-corner tl"></div>
-          <div class="cert-corner tr"></div>
-          <div class="cert-corner bl"></div>
-          <div class="cert-corner br"></div>
-          <div class="cert-thumb">
-            <img src="assets/images/certificates/cert-01.jpg" alt="Certificate 01" onerror="this.parentElement.classList.add('img-missing')">
-            <div class="cert-thumb-fallback"><span class="fallback-icon">◎</span></div>
-          </div>
-          <div class="cert-front-meta">
-            <h3>Certificate Title</h3>
-            <span class="cert-org">Issuing Organization</span>
-          </div>
-          <div class="cert-tag">CRED // 01</div>
-        </div>
-        <div class="cert-face cert-back">
-          <div class="cert-id">CRED // 01</div>
-          <h3>Certificate Title</h3>
-          <div class="cert-issuer">Issuing Organization · 2026</div>
-          <p>Short description of what this credential covers and why it matters.</p>
-          <a class="cert-verify" href="#" target="_blank" rel="noopener">VERIFY CREDENTIAL →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="cert-card" tabindex="0">
-      <div class="cert-card-inner">
-        <div class="cert-face cert-front">
-          <div class="cert-shine"></div>
-          <div class="cert-corner tl"></div>
-          <div class="cert-corner tr"></div>
-          <div class="cert-corner bl"></div>
-          <div class="cert-corner br"></div>
-          <div class="cert-thumb">
-            <img src="assets/images/certificates/cert-02.jpg" alt="Certificate 02" onerror="this.parentElement.classList.add('img-missing')">
-            <div class="cert-thumb-fallback"><span class="fallback-icon">◎</span></div>
-          </div>
-          <div class="cert-front-meta">
-            <h3>Certificate Title</h3>
-            <span class="cert-org">Issuing Organization</span>
-          </div>
-          <div class="cert-tag">CRED // 02</div>
-        </div>
-        <div class="cert-face cert-back">
-          <div class="cert-id">CRED // 02</div>
-          <h3>Certificate Title</h3>
-          <div class="cert-issuer">Issuing Organization · 2026</div>
-          <p>Short description of what this credential covers and why it matters.</p>
-          <a class="cert-verify" href="#" target="_blank" rel="noopener">VERIFY CREDENTIAL →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="cert-card" tabindex="0">
-      <div class="cert-card-inner">
-        <div class="cert-face cert-front">
-          <div class="cert-shine"></div>
-          <div class="cert-corner tl"></div>
-          <div class="cert-corner tr"></div>
-          <div class="cert-corner bl"></div>
-          <div class="cert-corner br"></div>
-          <div class="cert-thumb">
-            <img src="assets/images/certificates/cert-03.jpg" alt="Certificate 03" onerror="this.parentElement.classList.add('img-missing')">
-            <div class="cert-thumb-fallback"><span class="fallback-icon">◎</span></div>
-          </div>
-          <div class="cert-front-meta">
-            <h3>Certificate Title</h3>
-            <span class="cert-org">Issuing Organization</span>
-          </div>
-          <div class="cert-tag">CRED // 03</div>
-        </div>
-        <div class="cert-face cert-back">
-          <div class="cert-id">CRED // 03</div>
-          <h3>Certificate Title</h3>
-          <div class="cert-issuer">Issuing Organization · 2026</div>
-          <p>Short description of what this credential covers and why it matters.</p>
-          <a class="cert-verify" href="#" target="_blank" rel="noopener">VERIFY CREDENTIAL →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="contact-inner">
     <div class="section-head center">
-      <span class="eyebrow">// 07 — TRANSMIT</span>
+      <span class="eyebrow">06 / START A CONVERSATION</span>
       <h2>Get In Touch</h2>
-      <p class="contact-sub">Open to software engineering, AI/ML, and autonomous systems roles. Reach out — I read every transmission.</p>
+      <p class="contact-sub">Open to software engineering, AI/ML, and autonomous systems roles. Have a project or opportunity in mind? Let’s talk.</p>
     </div>
 
     <div class="contact-panel">
       <div class="contact-form-wrap">
-        <div class="panel-label">// COMPOSE MESSAGE</div>
+        <div class="panel-label">LET’S BUILD SOMETHING</div>
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <label for="cf-name">NAME</label>
@@ -454,15 +306,15 @@
           </div>
           <div class="form-row">
             <label for="cf-message">MESSAGE</label>
-            <textarea id="cf-message" name="message" rows="5" placeholder="Type your transmission..." required></textarea>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Tell me what you have in mind…" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary form-submit">SEND TRANSMISSION <span>→</span></button>
+          <button type="submit" class="btn btn-primary form-submit">OPEN EMAIL DRAFT <span>→</span></button>
           <p class="form-note">Opens your email client, addressed to piyushkumar.dev01@gmail.com</p>
         </form>
       </div>
 
       <div class="contact-info-wrap">
-        <div class="panel-label">// DIRECT CHANNELS</div>
+        <div class="panel-label">FIND ME ELSEWHERE</div>
         <a class="contact-card" href="mailto:piyushkumar.dev01@gmail.com">
           <span class="c-icon">✉</span>
           <span class="c-text">
@@ -500,50 +352,34 @@
   </div>
 </section>
 
+</main>
 <footer class="footer">
   <div class="footer-inner">
     <span>© <span id="year"></span> Piyush Kumar. Built with intent, not templates.</span>
-    <span class="footer-status"><span class="dot"></span> SIGNAL: LOCKED</span>
+    <span class="footer-status"><span class="dot"></span> ALWAYS LEARNING</span>
   </div>
 </footer>
 
-<!-- CURSOR DRONE (appears once you scroll past the hero, follows the pointer) -->
-<div class="cursor-drone" id="cursorDrone" aria-hidden="true">
-  <svg viewBox="0 0 100 100" width="46" height="46">
-    <g class="cursor-drone-rig">
-      <line x1="50" y1="50" x2="18" y2="18" class="cd-arm"></line>
-      <line x1="50" y1="50" x2="82" y2="18" class="cd-arm"></line>
-      <line x1="50" y1="50" x2="18" y2="82" class="cd-arm"></line>
-      <line x1="50" y1="50" x2="82" y2="82" class="cd-arm"></line>
-      <circle cx="18" cy="18" r="9" class="cd-rotor"></circle>
-      <circle cx="82" cy="18" r="9" class="cd-rotor"></circle>
-      <circle cx="18" cy="82" r="9" class="cd-rotor"></circle>
-      <circle cx="82" cy="82" r="9" class="cd-rotor"></circle>
-      <circle cx="50" cy="50" r="7" class="cd-core"></circle>
-    </g>
-  </svg>
-</div>
-
 <!-- AI CHAT ASSISTANT (answers only about Piyush) -->
 <div class="chatbot-widget" id="chatbotWidget">
-  <button class="chatbot-fab" id="chatbotFab" aria-expanded="false" aria-controls="chatbotWindow" aria-label="Open pilot assistant chat">
+  <button class="chatbot-fab" id="chatbotFab" aria-expanded="false" aria-controls="chatbotWindow" aria-label="Open portfolio assistant">
     <span class="chatbot-fab-ring"></span>
-    <span class="chatbot-fab-icon">◎</span>
+    <span class="chatbot-fab-icon">✳</span><span>Ask about me</span>
   </button>
 
-  <div class="chatbot-window" id="chatbotWindow" aria-hidden="true">
+  <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="Portfolio assistant" aria-hidden="true" inert>
     <div class="chatbot-header">
       <div class="chatbot-header-id">
         <span class="chatbot-avatar">◎</span>
         <div class="chatbot-header-text">
-          <span class="chatbot-title">PILOT ASSISTANT</span>
-          <span class="chatbot-status"><span class="dot"></span> ONLINE — ASK ABOUT PIYUSH</span>
+          <span class="chatbot-title">Portfolio assistant</span>
+          <span class="chatbot-status"><span class="dot"></span> Portfolio guide</span>
         </div>
       </div>
       <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">✕</button>
     </div>
 
-    <div class="chatbot-messages" id="chatbotMessages"></div>
+    <div class="chatbot-messages" id="chatbotMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
 
     <div class="chatbot-quick" id="chatbotQuick">
       <button type="button" data-q="What are your skills?">SKILLS</button>
@@ -553,14 +389,16 @@
     </div>
 
     <form class="chatbot-input-row" id="chatbotForm" autocomplete="off">
-      <input type="text" id="chatbotInput" placeholder="Ask about Piyush's skills, projects, experience…" aria-label="Type your question">
+      <input type="text" id="chatbotInput" maxlength="500" placeholder="Ask about Piyush's skills, projects, experience…" aria-label="Type your question">
       <button type="submit" aria-label="Send message">→</button>
     </form>
-    <p class="chatbot-scope-note">Scoped to Piyush's portfolio — won't answer outside it.</p>
+    <p class="chatbot-scope-note">Answers about Piyush’s work, background, and projects.</p>
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="chat-config.js"></script>
+<script src="chat-knowledge.js"></script>
 <script src="script.js"></script>
+<script src="flight.js"></script>
 </body>
 </html>

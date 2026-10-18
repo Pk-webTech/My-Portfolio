@@ -1,126 +1,40 @@
-<div align="center">
+# Piyush Kumar — Portfolio
 
-# ⌖ Piyush Kumar — Portfolio
+Responsive HTML, CSS, and vanilla JavaScript portfolio with an optional FastAPI/Groq assistant. No frontend build step.
 
-**Autonomous Systems & Full-Stack Engineer**
+## Preview
 
-A single-page developer portfolio styled as a _Flight Telemetry / FPV HUD_ —
-dark cockpit palette, live 3D wireframe drone, compass readouts, and a mission-log timeline.
+Run `python -m http.server 5173` from the repository and open http://localhost:5173.
+The contact form opens the visitor's email application; it does not send mail itself.
 
-[![Made with HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](#)
-[![Made with CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](#)
-[![Made with JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](#)
-[![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)](#)
-[![No Build Step](https://img.shields.io/badge/build-none%20required-2dd4bf?style=flat)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
+## Assistant setup
 
-</div>
+Without configuration, the widget immediately answers from `chat-knowledge.js` and clearly labels itself a local portfolio guide. This keyword guide is not a language model and does not interpret conversational follow-ups.
 
----
+To enable AI:
 
-## Overview
+1. Install `backend/requirements.txt` in a Python environment.
+2. Set `GROQ_API_KEY` on the backend only. `backend/env.example` lists configuration variables. Never place a key in frontend code.
+3. From `backend`, run `uvicorn main:app --host 127.0.0.1 --port 8000`.
+4. Set `window.PORTFOLIO_CHAT_ENDPOINT` in `chat-config.js` to `http://localhost:8000/chat` for local development, or your deployed HTTPS backend's `/chat` URL for production.
+5. Set backend `ALLOWED_ORIGINS` to your frontend origin, such as `http://localhost:5173`. Use your actual HTTPS frontend origin when deployed.
 
-This repo hosts my personal portfolio site, generated from my resume and built to reflect the
-part of engineering I care most about: autonomous systems. Instead of a generic template, the
-whole UI is framed as a pilot's HUD — a live Three.js drone spins in the hero, stats read out
-like telemetry, and experience is laid out as a mission log.
+The widget keeps a bounded conversation in memory, sends one request at a time, and falls back to local answers on network errors, invalid replies, or a 15-second timeout. Its status indicates when fallback is active. Messages render as text, never HTML. The backend restricts history roles and payload sizes and keeps provider errors private. Scope is guided by a system prompt, not a guaranteed security boundary.
 
-**Live demo:** _add your deployed URL here once hosted (GitHub Pages / Vercel / Netlify)_
+## Content
 
-## ✨ Features
+- `index.html`: biography, experience, projects, skills, education, and contact details.
+- `styles.css`: responsive dark/lime design and reduced-motion support.
+- `chat-knowledge.js`: local assistant facts.
+- `backend/main.py`: AI assistant facts and API handling. Keep these facts aligned with the page when editing.
+- `assets/images/myimage.jpeg`: hero portrait.
 
-- **Live 3D hero animation** — a wireframe quad-copter (Three.js) with spinning rotors, an
-  orbiting particle field, and mouse-reactive camera movement. No external model files needed.
-- **HUD-styled telemetry strip** — CGPA, competition wins, and shipped projects presented as
-  cockpit readouts.
-- **Mission-log timeline** — work experience laid out chronologically with active/past markers.
-- **Framed photo panel** — About section with a HUD-cornered photo frame (right side).
-- **Two-column contact panel** — a working `mailto:`-based contact form alongside direct
-  channels and an availability status indicator.
-- **FPV background video support** — drop in your own flight footage for the hero background.
-- **Fully responsive** — collapses cleanly down to mobile, respects `prefers-reduced-motion`.
-- **Zero build step** — plain HTML/CSS/JS. No `npm install`, no bundler, no framework.
+Placeholder certificates were removed until genuine credentials and verification links are supplied. Existing project links and contact details are retained.
 
-## 🖥️ Tech Stack
+## Checks
 
-| Layer         | Choice                                                                              |
-| ------------- | ----------------------------------------------------------------------------------- |
-| Structure     | Semantic HTML5                                                                      |
-| Styling       | Hand-written CSS3 (custom properties, grid/flexbox, no framework)                   |
-| Interactivity | Vanilla JavaScript (ES6)                                                            |
-| 3D graphics   | [Three.js](https://threejs.org/) r128, via CDN                                      |
-| Fonts         | Space Grotesk (display), Inter (body), JetBrains Mono (data/HUD) — via Google Fonts |
+Run `node --check script.js` and `node --test tests/chat.test.cjs`.
 
-````
+## Custom drone animation
 
-## 🚀 Getting Started
-
-No build tooling required — clone and open.
-
-```bash
-git clone https://github.com/Pk-webTech/<your-repo-name>.git
-cd <your-repo-name>
-````
-
-**Option 1 — instant, no server:**
-Just double-click `index.html`. (Fonts and the 3D scene load a bit more reliably over a local
-server, but this works.)
-
-**Option 2 — local server (recommended):**
-
-```bash
-# Python (built in on most systems)
-python -m http.server 8000
-
-# or Node.js
-npx serve .
-```
-
-Then open **http://localhost:8000**.
-
-**Option 3 — VS Code:**
-Install the _Live Server_ extension → right-click `index.html` → **Open with Live Server**.
-
-## 🖼️ Adding Your Own Media
-
-The site works out of the box (the hero drone is code-generated, no assets required), but it
-looks a lot more "you" once you drop in real media:
-
-| File                  | Location             | Purpose                               | Recommended size          |
-| --------------------- | -------------------- | ------------------------------------- | ------------------------- |
-| `profile.jpg`         | `assets/images/`     | About section photo                   | 800×1000px (4:5 portrait) |
-| `favicon.png`         | `assets/images/`     | Browser tab icon                      | 512×512px                 |
-| `og-cover.jpg`        | `assets/images/`     | Social share preview + video poster   | 1200×630px                |
-| flight footage `.mp4` | `assets/animations/` | Hero background video (muted, looped) | short, ≤10s, landscape    |
-
-All paths are already wired up in `index.html` / `styles.css` — just add files with the exact
-names above and they take effect immediately, no code changes needed. Until `profile.jpg` is
-added, a placeholder HUD frame is shown automatically.
-
-## 🎨 Customization
-
-- **Links:** update the GitHub/LinkedIn URLs in the Projects and Contact sections.
-- **Contact info:** update the email/phone in `index.html`'s Contact section.
-- **Color system:** all colors are CSS custom properties at the top of `styles.css` — change
-  `--teal` / `--amber` / `--bg` to re-theme the whole site in one place.
-- **Content:** every section (About, Experience, Projects, Skills, Education) is plain HTML in
-  `index.html` — no data files or templating, just edit the markup directly.
-
-## 📱 Browser Support
-
-Tested on current Chrome, Firefox, Edge, and Safari. Vendor-prefixed properties
-(`-webkit-backdrop-filter`, `-webkit-mask-image`) are included for broader compatibility.
-The 3D scene requires WebGL; on unsupported browsers the hero gracefully falls back to the
-static HUD readout panel.
-
-## 📄 License
-
-MIT — free to fork, adapt, and reuse as a base for your own portfolio.
-
----
-
-<div align="center">
-
-Built by **Piyush Kumar** · [GitHub](https://github.com/Pk-webTech) · piyushkumar.dev01@gmail.com
-
-</div>
+`flight.js` animates the inline SVG Flight Lab: an illustrated FPV pilot avatar, orbit and figure-eight paths, a landing sequence, and pause/resume controls. The portrait has a matching hovering drone. No animation packages or extra network dependencies are needed. Motion follows the device reduced-motion preference; the flight loop stops when the scene is offscreen or the page is hidden. Include `flight.js` when deploying alongside the existing HTML/CSS/JS files.
