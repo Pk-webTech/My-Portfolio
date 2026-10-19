@@ -42,3 +42,9 @@ Run `node --check script.js` and `node --test tests/chat.test.cjs`.
 ## Motion system
 
 `motion.js` adds progressive section reveals, one-time project-diagram animations, subtle pointer tilt on desktop, and a reading-progress indicator. The hero Pause animations control and the drone pause control share the same state. Device reduced-motion preferences override animation. Include `motion.js` before `flight.js` when deploying; no packages or build step are required.
+
+## Curated project gallery
+
+`data/projects.json` is the source for the ten selected repositories. Run `node scripts/update-projects.cjs` after editing it to regenerate the static project cards and synchronize local/backend assistant descriptions. Descriptions were checked against repository READMEs (and expense-splitter source) on 19 October 2026. Fileless malware research is explicitly labeled in progress.
+
+`projects.js` adds category filters, next/previous controls, keyboard navigation, native touch/trackpad scrolling, and a desktop-only cursor drone. The normal cursor remains usable. The drone hides over controls and respects the shared pause setting and reduced-motion preference. Without JavaScript, the full project list still scrolls horizontally. Deploy `projects.js` with the other frontend files.

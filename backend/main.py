@@ -78,21 +78,26 @@ FACTS ABOUT PIYUSH KUMAR:
   * Virtual Intern, Indian Space Lab, remote (Jun–Jul 2024) — remote sensing and satellite
     technology modules, simulation-based studies and data analysis.
 - Projects:
-  * ATERNET — intelligent solar power forecasting combining historical energy generation
-    data and weather information; deep learning, data processing, and complete AI pipelines.
-  * Leave Booking & Approval System — full-stack, role-based (Admin/Manager/Employee)
-    leave management platform. Django, DRF, PostgreSQL, Bootstrap, AJAX. Dynamic
-    org-hierarchy approval chains, real-time quota tracking, automated SMTP email
-    notifications, forced first-login password change, token-based reset, manager
-    dashboards. GitHub: github.com/Pk-webTech/Leave-Management-System
-  * Local RAG System (Custom Vector Store) — Java vector database built from scratch
-    implementing HNSW, KD-Tree, and brute-force nearest-neighbor search; local
-    Retrieval-Augmented Generation pipeline using Ollama, no external API dependency;
-    benchmarked accuracy/speed trade-offs across algorithms.
-    GitHub: github.com/Pk-webTech/Local-RAG-System-Custom-Vector-Store
-  * Crop Disease Detection & Pesticide Recommendation — computer vision/ML image
-    classifier for plant diseases with a Streamlit interface giving real-time predictions
-    and pesticide recommendations. Python, OpenCV.
+  * ATERNET (AI & Machine Learning): Adaptive temporal expert routing with dynamic quantile decoding. Uses weather forecasts and recent solar generation to predict PV output with P10, P50, and P90 uncertainty intervals.
+    GitHub: https://github.com/Pk-webTech/ATERNET
+  * Self-Healing RAG (AI & Machine Learning): A local-first RAG pipeline that evaluates answer quality, repairs weak retrievals, and adapts its retrieval settings. Combines hybrid search, LLM-as-judge evaluation, and an automated healing loop.
+    GitHub: https://github.com/Pk-webTech/self-healing-rag
+  * Collab AI (AI & Machine Learning): A collaborative AI workspace with private chats and real-time team rooms. Grounds answers in uploaded documents, preserves source citations, and keeps personal and shared retrieval separate.
+    GitHub: https://github.com/Pk-webTech/Collab_ai
+  * Autonomous Rover Navigation (Autonomous Systems): Terrain analysis and navigation for rover and drone applications. Combines visual risk maps, A* path planning, YOLO cone detection, and waypoint generation for autonomous missions.
+    GitHub: https://github.com/Pk-webTech/autonomous-rover-navigation
+  * PhishLens (Cybersecurity): Scores suspicious links using URL text features without visiting the target site. Combines tree models, a neural network, and anomaly detection with a web interface and batch scanner.
+    GitHub: https://github.com/Pk-webTech/ML-Based-Phishing-URL-Detection-
+  * Fileless Malware Research (Cybersecurity): Research into suspicious in-memory activity. Currently includes a reproducible random-forest dataset baseline and a report dashboard; RAM acquisition and process-level differencing are planned.
+    GitHub: https://github.com/Pk-webTech/Detection-of-Fileless-Malware-through-Differential-Memory-Forensics
+  * SpyAware (Cybersecurity): A Windows scanner that flags suspicious process, registry, file, network, and service activity. Organizes findings by risk in a web dashboard and produces PDF reports for review.
+    GitHub: https://github.com/Pk-webTech/SpyAware-Study
+  * TicketFlow (Full-Stack Development): A movie and concert booking platform with live seat maps, expiring seat holds, concurrency-safe bookings, waitlist offers, and QR-code email tickets across Spring Boot microservices.
+    GitHub: https://github.com/Pk-webTech/ticketflow
+  * Expense Splitter (Full-Stack Development): A group expense application with a React frontend and Java backend. Tracks shared expenses and balances, and simplifies debts into suggested settlement transactions.
+    GitHub: https://github.com/Pk-webTech/expense-splitter
+  * LeaveTrack (Full-Stack Development): A role-based Django platform with dynamic manager hierarchies, multi-level approvals, live leave quotas, REST APIs, and email notifications for employees and managers.
+    GitHub: https://github.com/Pk-webTech/Leave-Management-System
 - Skills:
   * Languages: Python, Java, JavaScript, SQL
   * Web dev: HTML, CSS, React, Django, Django REST Framework, REST APIs, AJAX, Bootstrap

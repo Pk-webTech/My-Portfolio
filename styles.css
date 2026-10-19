@@ -342,3 +342,49 @@ body { isolation:isolate; }
 .motion-paused .solar-art svg path { animation:none!important; stroke-dashoffset:0; }
 .motion-paused .leaf-scan::after { opacity:0; }
 @keyframes hero-enter { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+/* A single, scroll-snap gallery keeps the complete inventory within one section. */
+.project-toolbar { margin-bottom:18px; }
+.project-toolbar[hidden],.gallery-bottom[hidden],.gallery-card[hidden] { display:none!important; }
+.project-filters { display:flex; flex-wrap:wrap; gap:8px; }
+.project-filters button { display:flex; gap:9px; align-items:center; padding:10px 13px; border:1px solid var(--line); border-radius:7px; background:var(--panel); color:var(--muted); font-size:12px; min-height:42px; }
+.project-filters button span { font:10px var(--mono); opacity:.7; }
+.project-filters button[aria-pressed=true] { background:var(--accent); color:#102330; border-color:var(--accent); }
+.gallery-help { color:var(--muted); font-size:11px; margin-bottom:16px; }
+.project-track { display:flex; gap:22px; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; padding:5px 3px 20px; scrollbar-width:thin; scrollbar-color:#628399 #172435; scroll-padding-inline:3px; }
+.project-track:focus-visible { outline-offset:5px; border-radius:8px; }
+.project-track .gallery-card { flex:0 0 355px; scroll-snap-align:start; min-width:0; padding:0 24px 24px; }
+.project-track .gallery-card h3 { font-size:23px; }
+.project-track .gallery-card p { font-size:13px; }
+.project-track .project-subtitle { color:var(--accent); font-size:12px; margin-bottom:12px; }
+.project-track .gallery-art { margin:0 -24px 23px; height:174px; padding:22px; background:#203c40; color:#a4d5d9; }
+.project-track .autonomy-art { background:#2d3b28; color:#ceddb3; }
+.project-track .security-art { background:#302e47; color:#d2c3eb; }
+.project-track .fullstack-art { background:#1c334b; color:#b3d6f1; }
+.gallery-art>span { text-transform:uppercase; }
+.gallery-diagram { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.gallery-diagram b { border:1px solid currentColor; background:#ffffff05; padding:10px 8px; border-radius:7px; font:500 11px var(--display); }
+.flow-arrow { opacity:.65; font-size:14px; }
+.gallery-card.art-play .gallery-diagram b { animation:node-enter .6s ease-out both; }
+.gallery-card.art-play .gallery-diagram b:nth-of-type(2) { animation-delay:.15s; }
+.gallery-card.art-play .gallery-diagram b:nth-of-type(3) { animation-delay:.3s; }
+.motion-paused .gallery-diagram b { animation:none!important; }
+/* Never hide horizontally offscreen cards: native scrolling also works without JS. */
+.motion-ready .project-track [data-reveal] { opacity:1; transform:none; transition-delay:0ms; }
+.gallery-bottom { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-top:16px; color:var(--muted); font:11px var(--mono); }
+.gallery-navigation { display:flex; gap:9px; }
+.gallery-navigation button { width:44px; height:44px; border:1px solid var(--line); border-radius:50%; color:var(--text); background:var(--panel); font-size:22px; }
+.gallery-navigation button:not(:disabled):hover { color:#102330; background:var(--accent); }
+.cursor-drone { position:fixed; top:0; left:0; z-index:120; width:48px; height:28px; pointer-events:none; display:none; filter:drop-shadow(0 4px 6px #0008); }
+.cursor-drone.is-visible { display:block; }
+.cursor-drone svg { width:100%; height:100%; }
+.motion-paused .cursor-drone { display:none; }
+@media(max-width:540px) {
+ .project-track { gap:14px; }
+ .project-track .gallery-card { flex-basis:calc(100% - 28px); padding:0 20px 22px; }
+ .project-track .gallery-art { margin-inline:-20px; padding:18px; height:155px; }
+ .project-filters { gap:7px; }
+ .project-filters button { font-size:10px; padding:9px 10px; }
+ .gallery-diagram { gap:5px; }
+ .gallery-diagram b { flex:1; min-width:0; text-align:center; overflow-wrap:anywhere; font-size:10px; padding:9px 6px; }
+}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce) { .cursor-drone { display:none!important; } }

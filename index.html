@@ -50,57 +50,82 @@
 
 
 <!-- PROJECTS -->
-<section id="projects" class="projects">
-  <div class="section-head">
-    <span class="eyebrow">01 / SELECTED WORK</span>
-    <h2>A few things I’ve built.</h2><p>From intelligent predictions to software people can use.</p>
-  </div>
-  <div class="project-grid"><article class="project-card featured"><div class="project-art solar-art" aria-hidden="true"><span>ATERNET / FORECASTING CONCEPT</span><svg viewBox="0 0 440 130"><path d="M0 110H440M0 75H440M0 40H440" stroke="currentColor" opacity=".12"/><path d="M0 110 35 105 70 108 105 85 140 90 175 40 210 55 245 15 280 40 315 48 350 84 385 95 440 105" fill="none" stroke="currentColor" stroke-width="3"/><path d="M0 115 35 112 70 95 105 100 140 65 175 55 210 30 245 28 280 25 315 65 350 70 385 108 440 112" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 5" opacity=".45"/></svg><div>HISTORICAL DATA <span>→</span> BETTER PREDICTIONS</div></div><div class="project-card-head"><span class="project-index">FEATURED / AI &amp; ENERGY</span><span class="project-year">ATERNET</span></div><h3>ATERNET — Solar forecasting</h3><p>An intelligent solar power forecasting system combining historical energy generation with weather information to make more reliable predictions. An exploration of deep learning, data processing, and end-to-end AI pipelines.</p><div class="tags"><span>Machine Learning</span><span>Deep Learning</span><span>Forecasting</span></div><a class="project-link" href="#contact">Ask me about ATERNET ↗</a></article>
-
-    <article class="project-card"><div class="project-art workflow-art" aria-hidden="true"><span>LEAVE MANAGEMENT / WORKFLOW</span><div class="flow-nodes"><b>Request<br><small>Employee</small></b><i>→</i><b>Review<br><small>Manager</small></b><i>→</i><b>Approved<br><small>✓ Complete</small></b></div><div>LESS FRICTION. CLEARER DECISIONS.</div></div>
-      <div class="project-card-head">
-        <span class="project-index">01</span>
-        <span class="project-year">2026</span>
-      </div>
-      <h3>Leave Booking &amp; Approval System</h3>
-      <p>A role-based platform that makes leave requests and approvals easier to manage. Built with multi-level approvals, live quota tracking, authentication, and manager dashboards.</p>
-      <div class="tags">
-        <span>Python</span><span>Django</span><span>DRF</span><span>PostgreSQL</span><span>Bootstrap</span><span>AJAX</span>
-      </div>
-      <a class="project-link" href="https://github.com/Pk-webTech/Leave-Management-System" target="_blank" rel="noopener">Explore repository ↗</a>
-    </article>
-
-    <article class="project-card"><div class="project-art rag-art" aria-hidden="true"><span>LOCAL RAG / KNOWLEDGE RETRIEVAL</span><div class="rag-diagram"><b>Documents</b><span>→</span><b class="vector-node">[ 0.8, 0.2, … ]</b><span>→</span><b>Context</b></div><div>YOUR DATA. LOCAL INTELLIGENCE.</div></div>
-      <div class="project-card-head">
-        <span class="project-index">02</span>
-        <span class="project-year">2026</span>
-      </div>
-      <h3>Local RAG System — Custom Vector Store</h3>
-      <p>A vector database built from scratch in Java, connected to a local RAG pipeline with Ollama. Explores the accuracy and speed of HNSW, KD-Tree, and brute-force retrieval.</p>
-      <div class="tags">
-        <span>Java</span><span>HNSW</span><span>KD-Tree</span><span>Ollama</span><span>RAG</span>
-      </div>
-      <a class="project-link" href="https://github.com/Pk-webTech/Local-RAG-System-Custom-Vector-Store" target="_blank" rel="noopener">Explore repository ↗</a>
-    </article>
-
-    <article class="project-card"><div class="project-art crop-art" aria-hidden="true"><span>COMPUTER VISION / AGRICULTURE</span><div class="leaf-scan"><svg viewBox="0 0 120 90"><path d="M25 75Q10 15 95 10Q110 75 25 75Z" fill="currentColor" opacity=".25"/><path d="M20 85 85 23M46 58 41 36M59 46 80 47" fill="none" stroke="currentColor" stroke-width="3"/></svg><span>Image → Analysis<br><strong>Plant health insights</strong></span></div><div>FROM PIXELS TO PRACTICAL INSIGHTS.</div></div>
-      <div class="project-card-head">
-        <span class="project-index">03</span>
-        <span class="project-year">2025</span>
-      </div>
-      <h3>Crop Disease Detection &amp; Pesticide Recommendation</h3>
-      <p>Image-based classifier using computer vision and machine learning to identify plant
-      diseases, with a Streamlit interface delivering real-time predictions and automated
-      pesticide recommendations for farmers.</p>
-      <div class="tags">
-        <span>Python</span><span>OpenCV</span><span>AI/ML</span><span>Streamlit</span>
-      </div>
-      <a class="project-link" href="https://github.com/Pk-webTech" target="_blank" rel="noopener">Explore repository ↗</a>
-    </article>
-
-  </div>
+<section id="projects" class="projects" aria-labelledby="projectsTitle">
+ <div class="section-head"><span class="eyebrow">01 / SELECTED WORK</span><h2 id="projectsTitle">A few things I’ve built.</h2><p>From intelligent predictions to software people can use.</p></div>
+ <div class="project-toolbar" hidden><div class="project-filters" role="group" aria-label="Filter projects by category"><button type="button" data-filter="all" aria-pressed="true" aria-controls="projectTrack">All projects <span>10</span></button><button type="button" data-filter="ai" aria-pressed="false" aria-controls="projectTrack">AI & Machine Learning <span>3</span></button><button type="button" data-filter="autonomy" aria-pressed="false" aria-controls="projectTrack">Autonomous Systems <span>1</span></button><button type="button" data-filter="security" aria-pressed="false" aria-controls="projectTrack">Cybersecurity <span>3</span></button><button type="button" data-filter="fullstack" aria-pressed="false" aria-controls="projectTrack">Full-Stack Development <span>3</span></button></div></div>
+ <p id="galleryHelp" class="gallery-help">Scroll sideways or swipe to explore. Use the arrow keys when the gallery is focused.</p>
+ <div class="project-track" id="projectTrack" tabindex="0" role="region" aria-label="Project gallery" aria-describedby="galleryHelp"><article class="project-card gallery-card" data-category="ai" aria-labelledby="project-0">
+ <div class="project-art gallery-art ai-art" aria-hidden="true"><span>AI &amp; energy</span><div class="gallery-diagram"><b>Weather</b><span class="flow-arrow">→</span><b>Experts</b><span class="flow-arrow">→</span><b>Forecast</b></div><div>AI &amp; Machine Learning</div></div>
+ <div class="project-card-head"><span>AI &amp; Machine Learning</span><span>01</span></div>
+ <h3 id="project-0">ATERNET</h3><p class="project-subtitle">Probabilistic solar forecasting</p><p>Adaptive temporal expert routing with dynamic quantile decoding. Uses weather forecasts and recent solar generation to predict PV output with P10, P50, and P90 uncertainty intervals.</p>
+ <div class="tags"><span>Python</span><span>Deep Learning</span><span>Time Series</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/ATERNET" target="_blank" rel="noopener" aria-label="Explore ATERNET repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="ai" aria-labelledby="project-1">
+ <div class="project-art gallery-art ai-art" aria-hidden="true"><span>Adaptive retrieval</span><div class="gallery-diagram"><b>Retrieve</b><span class="flow-arrow">→</span><b>Evaluate</b><span class="flow-arrow">→</span><b>Heal</b></div><div>AI &amp; Machine Learning</div></div>
+ <div class="project-card-head"><span>AI &amp; Machine Learning</span><span>02</span></div>
+ <h3 id="project-1">Self-Healing RAG</h3><p class="project-subtitle">Retrieval that learns from its answers</p><p>A local-first RAG pipeline that evaluates answer quality, repairs weak retrievals, and adapts its retrieval settings. Combines hybrid search, LLM-as-judge evaluation, and an automated healing loop.</p>
+ <div class="tags"><span>Python</span><span>FastAPI</span><span>Ollama</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/self-healing-rag" target="_blank" rel="noopener" aria-label="Explore Self-Healing RAG repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="ai" aria-labelledby="project-2">
+ <div class="project-art gallery-art ai-art" aria-hidden="true"><span>Collaborative AI</span><div class="gallery-diagram"><b>Documents</b><span class="flow-arrow">→</span><b>Team chat</b><span class="flow-arrow">→</span><b>Citations</b></div><div>AI &amp; Machine Learning</div></div>
+ <div class="project-card-head"><span>AI &amp; Machine Learning</span><span>03</span></div>
+ <h3 id="project-2">Collab AI</h3><p class="project-subtitle">A shared workspace for grounded AI</p><p>A collaborative AI workspace with private chats and real-time team rooms. Grounds answers in uploaded documents, preserves source citations, and keeps personal and shared retrieval separate.</p>
+ <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Supabase</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/Collab_ai" target="_blank" rel="noopener" aria-label="Explore Collab AI repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="autonomy" aria-labelledby="project-3">
+ <div class="project-art gallery-art autonomy-art" aria-hidden="true"><span>ISDC 2025</span><div class="gallery-diagram"><b>Perceive</b><span class="flow-arrow">→</span><b>Plan</b><span class="flow-arrow">→</span><b>Navigate</b></div><div>Autonomous Systems</div></div>
+ <div class="project-card-head"><span>Autonomous Systems</span><span>04</span></div>
+ <h3 id="project-3">Autonomous Rover Navigation</h3><p class="project-subtitle">From terrain perception to safe paths</p><p>Terrain analysis and navigation for rover and drone applications. Combines visual risk maps, A* path planning, YOLO cone detection, and waypoint generation for autonomous missions.</p>
+ <div class="tags"><span>Python</span><span>Computer Vision</span><span>A* / YOLO</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/autonomous-rover-navigation" target="_blank" rel="noopener" aria-label="Explore Autonomous Rover Navigation repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="security" aria-labelledby="project-4">
+ <div class="project-art gallery-art security-art" aria-hidden="true"><span>Security &amp; ML</span><div class="gallery-diagram"><b>URL</b><span class="flow-arrow">→</span><b>Features</b><span class="flow-arrow">→</span><b>Risk score</b></div><div>Cybersecurity</div></div>
+ <div class="project-card-head"><span>Cybersecurity</span><span>05</span></div>
+ <h3 id="project-4">PhishLens</h3><p class="project-subtitle">ML-based phishing URL detection</p><p>Scores suspicious links using URL text features without visiting the target site. Combines tree models, a neural network, and anomaly detection with a web interface and batch scanner.</p>
+ <div class="tags"><span>Python</span><span>scikit-learn</span><span>PyTorch</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/ML-Based-Phishing-URL-Detection-" target="_blank" rel="noopener" aria-label="Explore PhishLens repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="security" aria-labelledby="project-5">
+ <div class="project-art gallery-art security-art" aria-hidden="true"><span>Research in progress</span><div class="gallery-diagram"><b>Features</b><span class="flow-arrow">→</span><b>Baseline</b><span class="flow-arrow">→</span><b>Reports</b></div><div>Cybersecurity</div></div>
+ <div class="project-card-head"><span>Cybersecurity</span><span>06</span></div>
+ <h3 id="project-5">Fileless Malware Research</h3><p class="project-subtitle">Differential memory forensics</p><p>Research into suspicious in-memory activity. Currently includes a reproducible random-forest dataset baseline and a report dashboard; RAM acquisition and process-level differencing are planned.</p>
+ <div class="tags"><span>Python</span><span>Random Forest</span><span>React</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/Detection-of-Fileless-Malware-through-Differential-Memory-Forensics" target="_blank" rel="noopener" aria-label="Explore Fileless Malware Research repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="security" aria-labelledby="project-6">
+ <div class="project-art gallery-art security-art" aria-hidden="true"><span>Security tooling</span><div class="gallery-diagram"><b>Scan</b><span class="flow-arrow">→</span><b>Investigate</b><span class="flow-arrow">→</span><b>Report</b></div><div>Cybersecurity</div></div>
+ <div class="project-card-head"><span>Cybersecurity</span><span>07</span></div>
+ <h3 id="project-6">SpyAware</h3><p class="project-subtitle">Windows security analysis</p><p>A Windows scanner that flags suspicious process, registry, file, network, and service activity. Organizes findings by risk in a web dashboard and produces PDF reports for review.</p>
+ <div class="tags"><span>Python</span><span>Windows</span><span>Behavioral Analysis</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/SpyAware-Study" target="_blank" rel="noopener" aria-label="Explore SpyAware repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="fullstack" aria-labelledby="project-7">
+ <div class="project-art gallery-art fullstack-art" aria-hidden="true"><span>Distributed systems</span><div class="gallery-diagram"><b>Select seat</b><span class="flow-arrow">→</span><b>Hold</b><span class="flow-arrow">→</span><b>Book</b></div><div>Full-Stack Development</div></div>
+ <div class="project-card-head"><span>Full-Stack Development</span><span>08</span></div>
+ <h3 id="project-7">TicketFlow</h3><p class="project-subtitle">Real-time ticket booking</p><p>A movie and concert booking platform with live seat maps, expiring seat holds, concurrency-safe bookings, waitlist offers, and QR-code email tickets across Spring Boot microservices.</p>
+ <div class="tags"><span>Java / Spring Boot</span><span>React</span><span>Redis</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/ticketflow" target="_blank" rel="noopener" aria-label="Explore TicketFlow repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="fullstack" aria-labelledby="project-8">
+ <div class="project-art gallery-art fullstack-art" aria-hidden="true"><span>Full-stack app</span><div class="gallery-diagram"><b>Split</b><span class="flow-arrow">→</span><b>Balance</b><span class="flow-arrow">→</span><b>Settle</b></div><div>Full-Stack Development</div></div>
+ <div class="project-card-head"><span>Full-Stack Development</span><span>09</span></div>
+ <h3 id="project-8">Expense Splitter</h3><p class="project-subtitle">Shared expenses, clearer balances</p><p>A group expense application with a React frontend and Java backend. Tracks shared expenses and balances, and simplifies debts into suggested settlement transactions.</p>
+ <div class="tags"><span>Java</span><span>Spring Boot</span><span>React</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/expense-splitter" target="_blank" rel="noopener" aria-label="Explore Expense Splitter repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article>
+<article class="project-card gallery-card" data-category="fullstack" aria-labelledby="project-9">
+ <div class="project-art gallery-art fullstack-art" aria-hidden="true"><span>Workflow automation</span><div class="gallery-diagram"><b>Request</b><span class="flow-arrow">→</span><b>Review</b><span class="flow-arrow">→</span><b>Approve</b></div><div>Full-Stack Development</div></div>
+ <div class="project-card-head"><span>Full-Stack Development</span><span>10</span></div>
+ <h3 id="project-9">LeaveTrack</h3><p class="project-subtitle">Leave management &amp; approvals</p><p>A role-based Django platform with dynamic manager hierarchies, multi-level approvals, live leave quotas, REST APIs, and email notifications for employees and managers.</p>
+ <div class="tags"><span>Python / Django</span><span>PostgreSQL</span><span>DRF</span></div>
+ <a class="project-link" href="https://github.com/Pk-webTech/Leave-Management-System" target="_blank" rel="noopener" aria-label="Explore LeaveTrack repository on GitHub (opens in a new tab)">Explore repository ↗</a>
+</article></div>
+ <div class="gallery-bottom" hidden><span id="galleryStatus" role="status" aria-live="polite" aria-atomic="true">Projects 1–3 of 10</span><div class="gallery-navigation"><button id="projectsPrev" type="button" aria-label="Previous projects" aria-controls="projectTrack">←</button><button id="projectsNext" type="button" aria-label="Next projects" aria-controls="projectTrack">→</button></div></div>
 </section>
-
 
 <section id="about" class="about"><div class="section-head"><span class="eyebrow">02 / ABOUT ME</span><h2>Curious by nature.<br><span>Hands-on by choice.</span></h2></div>
 <div class="about-grid"><div class="about-text"><p class="lead">I'm a fourth-year B.Tech Computer Science &amp; Engineering student specializing in Information Security at VIT Vellore. I enjoy turning complex challenges into working solutions.</p>
@@ -390,10 +415,12 @@
   </div>
 </div>
 
+<div class="cursor-drone" id="cursorDrone" aria-hidden="true"><svg viewBox="-56 -30 112 60"><use href="#portfolioDrone" x="-56" y="-30" width="112" height="60"></use></svg></div>
 <script src="chat-config.js"></script>
 <script src="chat-knowledge.js"></script>
 <script src="script.js"></script>
 <script src="motion.js"></script>
 <script src="flight.js"></script>
+<script src="projects.js"></script>
 </body>
 </html>
