@@ -377,6 +377,10 @@ body { isolation:isolate; }
 .cursor-drone { position:fixed; top:0; left:0; z-index:120; width:48px; height:28px; pointer-events:none; display:none; filter:drop-shadow(0 4px 6px #0008); }
 .cursor-drone.is-visible { display:block; }
 .cursor-drone svg { width:100%; height:100%; }
+.survey-beam { display:none; }
+.flight-stage[data-flight-mode=survey] .survey-beam { display:block; }
+.flight-stage[data-flight-mode=survey] .scan-line { animation:survey-scan 1.8s ease-in-out infinite; transform-origin:0 12px; }
+@keyframes survey-scan { 0%,100% { transform:scale(.35); opacity:.3; } 65% { transform:scale(1); opacity:1; } }
 .motion-paused .cursor-drone { display:none; }
 @media(max-width:540px) {
  .project-track { gap:14px; }

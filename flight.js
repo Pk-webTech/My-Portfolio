@@ -18,9 +18,10 @@
   const paths = {
     orbit:'M535 165 C535 80 875 80 875 165 C875 250 535 250 535 165',
     eight:'M535 165 C535 45 875 285 875 165 C875 45 535 285 535 165',
+    survey:'M535 100H875V145H535V190H875',
     land:'M705 113V279'
   };
-  const labels = {orbit:'Orbit',eight:'Figure eight',land:'Landing'};
+  const labels = {orbit:'Orbit',eight:'Figure eight',survey:'Survey scan',land:'Landing'};
   function sync() {
     document.body.classList.toggle('motion-paused', paused || document.hidden);
     pause.setAttribute('aria-pressed', String(paused));
@@ -33,7 +34,10 @@
   function draw() { drone.setAttribute('transform', `translate(${position.x.toFixed(2)} ${position.y.toFixed(2)})`); bank.setAttribute('transform', `rotate(${angle.toFixed(2)})`); }
   function tick(now) {
     const dt = previous === null ? 0 : Math.min((now-previous)/1000,.05); previous = now; phase += dt*.65;
-    const target = mode === 'land' ? {x:705,y:279} : mode === 'eight' ? {x:705+170*Math.sin(phase),y:165+60*Math.sin(phase*2)} : {x:705+170*Math.cos(phase),y:165+64*Math.sin(phase)};
+    const surveyPoints=[{x:535,y:100},{x:875,y:100},{x:875,y:145},{x:535,y:145},{x:535,y:190},{x:875,y:190}];
+    const leg=Math.floor(phase)%surveyPoints.length;
+    const from=surveyPoints[leg], to=surveyPoints[(leg+1)%surveyPoints.length], mix=phase%1;
+    const target = mode === 'survey' ? {x:from.x+(to.x-from.x)*mix,y:from.y+(to.y-from.y)*mix} : mode === 'land' ? {x:705,y:279} : mode === 'eight' ? {x:705+170*Math.sin(phase),y:165+60*Math.sin(phase*2)} : {x:705+170*Math.cos(phase),y:165+64*Math.sin(phase)};
     const blend = 1-Math.exp(-dt*3);
     const dx = target.x-position.x;
     position.x += dx*blend; position.y += (target.y-position.y)*blend;
@@ -43,7 +47,7 @@
     frame=requestAnimationFrame(tick);
   }
   buttons.forEach(button => button.addEventListener('click', () => {
-    mode=button.dataset.flight; stage.dataset.landed='false'; stage.dataset.flightMode=mode; path.setAttribute('d',paths[mode]);
+    mode=button.dataset.flight; phase=0; stage.dataset.landed='false'; stage.dataset.flightMode=mode; path.setAttribute('d',paths[mode]);
     buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     if (reduced.matches || paused) { position={x:705,y:mode==='land'?279:113}; angle=0; stage.dataset.landed=String(mode==='land'); draw(); }
     sync();

@@ -104,6 +104,9 @@ FACTS ABOUT PIYUSH KUMAR:
   * Databases: SQL, PostgreSQL
   * Cloud & tools: AWS, Docker, Kubernetes, Git, GitHub
   * AI/Robotics: Machine Learning, Computer Vision, Sensor Fusion, ROS
+  * Autonomous navigation: Navigation algorithms, path planning, A* search, waypoint navigation
+  * Embedded systems & sensors: Raspberry Pi, edge AI, LiDAR, GPS, optical flow sensors, depth cameras
+  * Flight software: Mission Planner, Betaflight
   * Cybersecurity: Threat Detection, Behavioral Analysis, Malware Detection
   * Leadership: Technical leadership, drone assembly & tuning, FPV systems, technical
     documentation

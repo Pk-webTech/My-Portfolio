@@ -147,13 +147,14 @@ window.PORTFOLIO_KB = [
       "cybersecurity",
       "skill",
       "tech stack",
+      "navigation", "embedded", "raspberry pi", "lidar", "gps", "optical flow", "mission planner", "betaflight",
       "technologies",
       "languages",
       "stack",
       "tools",
       "know"
     ],
-    "answer": "His toolkit spans Python, Java, JavaScript and SQL; web dev with React, Django & DRF; PostgreSQL; AWS, Docker, Kubernetes and Git; plus AI/ML, computer vision, sensor fusion and ROS on the robotics side, and threat/malware detection on the security side."
+    "answer": "His toolkit spans Python, Java, JavaScript and SQL; web dev with React, Django & DRF; PostgreSQL; AWS, Docker, Kubernetes and Git; plus AI/ML, computer vision, sensor fusion, ROS, navigation algorithms, A* path planning, waypoint navigation, Raspberry Pi, edge AI, LiDAR, GPS, optical flow sensors, depth cameras, Mission Planner and Betaflight on the robotics side, and threat/malware detection on the security side."
   },
   {
     "id": "experience",
